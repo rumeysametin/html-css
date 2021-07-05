@@ -69,7 +69,7 @@
 </style>
 </head>
 <body>
- 
+
     <a name="return"></a>
 
 <div class="tulip"><img src="images/tulip.jpg" width="40px" height="45px"/></div>
@@ -140,11 +140,12 @@
 <div class="simurg"><img src="images/simurg.jpg" width="300px" height="270px"/><center>SİMURG </center> </div>
 <p id="hydra"> Red Monday </p>
 <p id="janus"> Purple Thursday </p>
+
 <form>
-username = <input type="text" name="username" size="12"/>
-<br/>
-<br/>
-your age = <input type="text" name="your age" size="5" maxlength="3"/>
+<label for="name1">username</label>
+<input type="text" name="name1" size="12"/><br/>
+<label for="age">your name</label>
+<input type="text" name="age" size="5" maxlength="3"/><br/>
 <br/> choose your gender:
 <input type="radio" name="gender" value="male"/> male 
 <input type="radio" name="gender" value="female"/> female
@@ -156,22 +157,41 @@ your age = <input type="text" name="your age" size="5" maxlength="3"/>
 <input type="checkbox" name="colors" value="w"/> white
 <input type="checkbox" name="colors" value="o"/> orange
 
-<br/> choose your nationality
-<select name="nationality">
+<br/><label for="nationality">choose your nationality</label>
+<select name="nationality" id="nationality">
 <option value="tc">turkish</option>
 <option value="ye">yemeni</option>
 <option value="ger">german</option>
 <option value="ame">american</option>
 <option value="ind">indian</option>
-</select>
+</select> <br/>
+<br/><input type="submit" value="submit"/>
 
 <br/> how can we serve you better? <br/>
 <textarea name="comment" cols="50" rows="7" maxlength="250">your comments are important to us</textarea>
 <br/> enter your password =
 <input type="password" name="password"/>
-<br/> upload your document here <input type="file" name="file1"/>
+<br/> upload your document here <input type="file" name="file1"/><br/>
+<input type="button" onclick="alert('its all over')"value="click">
 
 </form>
+
+<script>
+var array = ["java","python","c++","c"];
+array.push("php");
+alert (array[0]);
+alert (array[1]);
+alert (array[2]);
+alert (array[3]);
+alert(array.length);
+/*var length=array.length;
+document.write(length); */
+
+    var age=63;
+    var year=7;
+document.write ("<br/>NASA is "+age+" years old. "+year+" years later it will be "+(age+year)+" years old")
+
+</script>
 </body>
 <!--comment line-->
 </html>
