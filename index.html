@@ -177,21 +177,44 @@
 </form>
 
 <script>
-var array = ["java","python","c++","c"];
+/*var array = ["java","python","c++","c"];
 array.push("php");
 alert (array[0]);
 alert (array[1]);
 alert (array[2]);
 alert (array[3]);
 alert(array.length);
-/*var length=array.length;
+var length=array.length;
 document.write(length); */
 
     var age=63;
     var year=7;
 document.write ("<br/>NASA is "+age+" years old. "+year+" years later it will be "+(age+year)+" years old")
+function hi(name) {
+    console.log("Hi " + name);
+}
+hi("Rumeysa");
+hi("Ammar");
+function total(a,b,c) {
+    console.log("total: " + (a + b + c));
+}
+total(7,8,9);
+function multiply(x) {
+    return x*x;
+}
+var multiply = multiply(5);
+console.log((multiply));
+
+function n1(k,l) {
+    function n2(m,n) {
+        console.log(k+l+m+n);
+    }
+    return n2;
+}
+n1(6,7)(2,3);
 
 </script>
 </body>
+<!-- go to 212  n2(2,3);   n1(6,7)-->
 <!--comment line-->
 </html>
