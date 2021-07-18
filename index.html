@@ -187,6 +187,11 @@ alert(array.length);
 var length=array.length;
 document.write(length); */
 
+var lessons = new Array ("HTML ","Javascript ","C++ ");
+for (var r = 0; r<lessons.length; r++){
+    document.write(lessons[r]);
+}
+
     var age=63;
     var year=7;
 document.write ("<br/>NASA is "+age+" years old. "+year+" years later it will be "+(age+year)+" years old")
@@ -263,6 +268,42 @@ do { console.log ("z = " + z );
 for ( var i = 0; i<10; i+=2 ){
     console.log ("i = "+ i);
 }
+
+var working = {
+    name:"Kağan",
+    surname:"Yıldırım",
+    number:"15643",
+    languages:["Php","java","C++"],
+    address: {
+        street:"İstiklal",
+        apartment:"Mısır"
+    }
+};
+console.log(working.name);
+console.log(working.languages);
+console.log(working.address.street);
+
+var working = new Object();
+working.name = "Kağan ";
+working.languages = "Php, Java, C++";
+working.informations = function () {
+    return "İnformations: "+ this.name + this.languages;
+};
+console.log(working.informations());
+
+/*function working(name,surname,number) {
+    this.name = name;
+    this.surname = surname;
+    this.number = number;
+    this.workinginformation = function () {
+        return "Name: " + this.name + "\nSurname: " + this.surname + "\nNumber: " + this.number;
+    }
+}
+var working1 = new working ("Kağan", "Yıldırım",15643); 
+console.log(working1.workinginformation());*/
+var country1 = {name:"germany", language:"german", location:"AB"};
+console.log(country1.location);
+
 </script>
 </body>
 <!-- go to 212  n2(2,3);   n1(6,7)-->
