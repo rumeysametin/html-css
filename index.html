@@ -191,7 +191,48 @@ var lessons = new Array ("HTML ","Javascript ","C++ ");
 for (var r = 0; r<lessons.length; r++){
     document.write(lessons[r]);
 }
+document.write("<br/>");
+document.write(lessons.join());
+lessons.forEach(function (lesson) {
+    console.log(lesson);
+});
 
+var hege = ["Ali", "Burak"];
+var stale = ["Kemal", "Bilge", "Duru"];
+console.log(hege.concat(stale).join());
+console.log(stale.reverse().join());
+console.log(hege.concat(stale).sort().join());
+
+var list = new Array();
+list [0] = Math.round(3.75);
+list [1] = Math.floor(5.99);
+list [2] = Math.sqrt(36);
+list [3] = Math.PI;
+list [4] = Math.random();
+for( var e = 0; e<list.length; e++){
+    console.log(list.join());
+}
+const time = new Date();
+console.log(time);
+const hour = time.getHours();
+console.log(hour);
+time.setMinutes(00);
+console.log(time);
+const d = new Date(1999, 11, 6, 00, 30, 00);
+console.log(d);
+
+function agecontrol() {
+    yearofbirth = prompt("please enter your year of birth");
+    var now = new Date();
+    var borderyear = now.getFullYear()-18;
+    if (yearofbirth > borderyear){
+        alert ("Sorry, you can't login to the site ");
+    }
+    else { 
+        alert ("Welcome to the site");
+    }
+}
+agecontrol();
     var age=63;
     var year=7;
 document.write ("<br/>NASA is "+age+" years old. "+year+" years later it will be "+(age+year)+" years old")
