@@ -140,6 +140,8 @@
 <div class="simurg"><img src="images/simurg.jpg" width="300px" height="270px"/><center>SİMURG </center> </div>
 <p id="hydra"> Red Monday </p>
 <p id="janus"> Purple Thursday </p>
+<button onmouseover="changecolor()">click</button>
+<button onclick="mouseover()" onmouseout="mouseout()">click</button>
 
 <form>
 <label for="name1">username</label>
@@ -173,9 +175,14 @@
 <input type="password" name="password"/>
 <br/> upload your document here <input type="file" name="file1"/><br/>
 <input type="button" onclick="alert('its all over')"value="click">
+<button onclick="this.innerHTML='button cliched'">click here </button>
 
 </form>
 
+<br/> <form name="myform" action="/action_page.php" onsubmit="return verify()" method="post">
+    Name: <input type="text" name="name"/>
+    <button type= "submit">Send</button> </form>
+    
 <script>
 /*var array = ["java","python","c++","c"];
 array.push("php");
@@ -221,7 +228,7 @@ console.log(time);
 const d = new Date(1999, 11, 6, 00, 30, 00);
 console.log(d);
 
-function agecontrol() {
+/*function agecontrol() {
     yearofbirth = prompt("please enter your year of birth");
     var now = new Date();
     var borderyear = now.getFullYear()-18;
@@ -232,7 +239,8 @@ function agecontrol() {
         alert ("Welcome to the site");
     }
 }
-agecontrol();
+agecontrol();*/
+
     var age=63;
     var year=7;
 document.write ("<br/>NASA is "+age+" years old. "+year+" years later it will be "+(age+year)+" years old")
@@ -345,6 +353,28 @@ console.log(working1.workinginformation());*/
 var country1 = {name:"germany", language:"german", location:"AB"};
 console.log(country1.location);
 
+function changecolor() {
+    var element = document.getElementById("janus");
+    element.style.color = "orange";
+}
+function mouseover() {
+    var element = document.getElementById("hydra");
+    element.innerHTML = "Mouse Over Effect";
+}
+function mouseout() {
+    var element = document.getElementById("hydra");
+    element.innerHTML = "Mouse Out Effect";
+}
+function verify() {
+    var form = document.forms["myform"];
+    var değer = form["name"].value;
+
+    if (değer == "") {
+        alert ("name field can't be left blank");
+        return false;
+    }
+    return true;
+}
 </script>
 </body>
 <!-- go to 212  n2(2,3);   n1(6,7)-->
